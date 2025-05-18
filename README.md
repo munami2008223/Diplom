@@ -83,3 +83,5 @@ docker-compose down
 ```copy
 gradlew allureServe
 ```
+
+[![Java CI with Gradle](https://github.com/munami2008223/Diplom/actions/workflows/gradle.yml/badge.svg)](https://github.com/munami2008223/Diplom/actions/workflows/gradle.yml)
