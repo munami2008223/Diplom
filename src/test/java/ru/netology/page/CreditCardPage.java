@@ -24,10 +24,10 @@ public class CreditCardPage {
 
     public SelenideElement codeField = $("[placeholder='999']");
     public SelenideElement contButton = $$(".button__content").find(Condition.exactText("Продолжить"));
-    private SelenideElement heading = $(withText("Кредит по данным карты"));
-    private SelenideElement cardNumberField = $("[placeholder='0000 0000 0000 0000']");
-    private SelenideElement monthField = $("[placeholder='08']");
-    private SelenideElement yearField = $("[placeholder='22']");
+    private final SelenideElement heading = $(withText("Кредит по данным карты"));
+    private final SelenideElement cardNumberField = $("[placeholder='0000 0000 0000 0000']");
+    private final SelenideElement monthField = $("[placeholder='08']");
+    private final SelenideElement yearField = $("[placeholder='22']");
 
     public CreditCardPage() {
 

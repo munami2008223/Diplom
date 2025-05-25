@@ -10,9 +10,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class PaymentTypesPage {
 
-    private SelenideElement heading = $(withText("Путешествие дня"));
-    private SelenideElement buyButton = $(withText("Купить"));
-    private SelenideElement creditButton = $(withText("Купить в кредит"));
+    private final SelenideElement heading = $(withText("Путешествие дня"));
+    private final SelenideElement buyButton = $(withText("Купить"));
+    private final SelenideElement creditButton = $(withText("Купить в кредит"));
 
     public void paymentTypesPage() {
         heading.shouldBe(visible);

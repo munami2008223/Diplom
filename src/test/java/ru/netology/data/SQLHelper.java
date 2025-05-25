@@ -28,7 +28,7 @@ public class SQLHelper {
     }
 
     @SneakyThrows
-    public static void сleanBase() {
+    public static void cleanBase() {
         var connection = getConnection();
         runner.execute(connection, "DELETE FROM credit_request_entity");
         runner.execute(connection, "DELETE FROM order_entity");

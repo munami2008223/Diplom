@@ -23,11 +23,11 @@
 [Ссылка на Дипломное задание](https://github.com/netology-code/qa-diploma)
 
 ## Тестовая документация
-[Планирование автоматизации тестирования](https://github.com/munami2008223/Diplom_QA/blob/main/documents/Plan.md)
+[Планирование автоматизации тестирования](https://github.com/munami2008223/Diplom/blob/main/documents/Plan.md)
 
-[Отчёт по итогам тестирования](https://github.com/munami2008223/Diplom_QA/blob/main/documents/Report.md)
+[Отчёт по итогам тестирования](https://github.com/munami2008223/Diplom/blob/main/documents/Report.md)
 
-[Отчет по итогам автоматизации](https://github.com/munami2008223/Diplom_QA/blob/main/documents/Summary.md)
+[Отчет по итогам автоматизации](https://github.com/munami2008223/Diplom/blob/main/documents/Summary.md)
 
 ### Запуск приложения
 #### Подготовительный этап
@@ -36,7 +36,7 @@
 - Открыть новый проект, выбрав язык - Java, систему сборки - Gradle
 - Склонировать удалённый репозиторий, выполнив в терминале команду
 ```copy
-git clone https://github.com/munami2008223/Diplom_QA.git
+git clone https://github.com/munami2008223/Diplom.git
 ```
 
 #### Запуск тестового приложения
@@ -47,11 +47,11 @@ docker-compose up
 В новой вкладке терминала запустить тестируемое приложение:
 - [x] Для **MySQL**:
 ```copy
-java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa-shop.jar
+java "-Dspring.datasource.url=jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar
 ```
 - [x] Для **PostgreSQL**:
 ```copy 
-java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
+java "-Dspring.datasource.url=jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar
 ```
 
 Чтобы убедиться, что приложение запущено и готово к работе, перейти по [ссылке](http://localhost:8080/)
@@ -61,12 +61,12 @@ java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts
 
 - [x] Для **MySQL**:
 ```copy
-gradlew clean test -Ddb.url=jdbc:mysql://localhost:3306/app
+./gradlew clean test "-D db.url=jdbc:mysql://localhost:3306/app"
 ```
 
 - [x] Для **PostgreSQL**:
 ```copy 
-gradlew clean test -Ddb.url=jdbc:postgresql://localhost:5432/app
+./gradlew clean test "-D db.url=jdbc:postgresql://localhost:5432/app"
 ```
 
 ### Перезапуск тестов и приложения
@@ -81,7 +81,7 @@ docker-compose down
 ### Формирование отчёта о тестировании
 Для формирования отчётности через Allure ввести в окне терминала команду
 ```copy
-gradlew allureServe
+./gradlew allureServe
 ```
 
 [![Java CI with Gradle](https://github.com/munami2008223/Diplom/actions/workflows/gradle.yml/badge.svg)](https://github.com/munami2008223/Diplom/actions/workflows/gradle.yml)
