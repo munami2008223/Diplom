@@ -17,6 +17,7 @@ public class DataHelper {
     private DataHelper() {
     }
 
+
     public static CardInfo getCardApproved() {//номер карты, внесенной в базу
         return new CardInfo("4444 4444 4444 4441", "APPROVED");
 
@@ -26,6 +27,7 @@ public class DataHelper {
 
         return new CardInfo("4444 4444 4444 4442", "DECLINED");
     }
+
 
     public static String getRandomCardNumber() {//рандомный номер карты
         return faker.number().digits(16);
@@ -178,6 +180,27 @@ public class DataHelper {
 
         return stringBuilder.toString();
     }
+
+    @Value
+    public static class AuthInfo {
+        String number;
+        String randomYear;
+        String randomMonth;
+        String randomName;
+        String numberCVC;
+    }
+
+    public static AuthInfo validUser(String cardType) {
+        return new AuthInfo(
+                cardType, // Номер карты: cardApproved, cardDeclined или randomCardNumber
+                getRandomYear(1),  // рандомный валидный год
+                getRandomMonth(1), // рандомный валидный месяц
+                getRandomName(), // Имя пользователя (Имя + Фамилия) на латинице
+                getNumberCVC(3));
+        // Любой CVC-код из 3 цифр
+
+    }
+
 
 }
 

@@ -5,7 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
-        import ru.netology.data.DataHelper;
+import ru.netology.data.DataHelper;
 import ru.netology.data.SQLHelper;
 import ru.netology.page.PaymentTypesPage;
 
@@ -189,7 +189,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.6 Валидация поля Номер карты - нули")
+    @DisplayName("3.5 Валидация поля Номер карты - нули")
     public void paymentByZeroCardNumber() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -201,7 +201,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.7 Валидация поля Номер карты - пустое")
+    @DisplayName("3.6 Валидация поля Номер карты - пустое")
     public void paymentByEmptyCardNumber() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -213,7 +213,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.8 Валидация поля Номер карты. Ввод граничных значений - 15 цифр")
+    @DisplayName("3.7 Валидация поля Номер карты. Ввод граничных значений - 15 цифр")
     public void paymentBy15DigitCardNumber() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -225,7 +225,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.10 Валидация поля Месяц - латиница")
+    @DisplayName("3.8 Валидация поля Месяц - латиница")
     public void paymentByCardMonthLatin() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -237,7 +237,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.11 Валидация поля Месяц - кириллица")
+    @DisplayName("3.9 Валидация поля Месяц - кириллица")
     public void paymentByCardMonthRu() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -249,7 +249,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.12 Валидация поля Месяц - спецсимволы")
+    @DisplayName("3.10 Валидация поля Месяц - спецсимволы")
     public void paymentByCardMonthSpec() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -261,7 +261,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.13 Валидация поля Месяц. Ввод граничных значений - одна цифра")
+    @DisplayName("3.11 Валидация поля Месяц. Ввод граничных значений - одна цифра")
     public void paymentWithOneDigitMonth() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -273,7 +273,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.15 Валидация поля Месяц. Ввод граничных значений - нули")
+    @DisplayName("3.12 Валидация поля Месяц. Ввод граничных значений - нули")
     public void paymentWithMonthZero() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -285,7 +285,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.16 Валидация поля Месяц. Ввод граничных значений - 11")
+    @DisplayName("3.13 Валидация поля Месяц. Ввод граничных значений - 11")
     public void paymentMonth11() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -298,7 +298,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.17 Валидация поля Месяц. Ввод граничных значений - 12")
+    @DisplayName("3.14 Валидация поля Месяц. Ввод граничных значений - 12")
     public void paymentMonth12() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -311,7 +311,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.18 Валидация поля Месяц. Ввод граничных значений - 13")
+    @DisplayName("3.15 Валидация поля Месяц. Ввод граничных значений - 13")
     public void paymentWithNonExistentMonth() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -323,7 +323,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.19 Валидация поля Год - латиница")
+    @DisplayName("3.16 Валидация поля Год - латиница")
     public void paymentYearEn() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -335,7 +335,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.20 Валидация поля Год - кириллица")
+    @DisplayName("3.17 Валидация поля Год - кириллица")
     public void paymentYearRu() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -347,7 +347,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.21 Валидация поля Год - спецсимволы")
+    @DisplayName("3.18 Валидация поля Год - спецсимволы")
     public void paymentYearSpec() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -359,7 +359,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.22 Валидация поля Год. Ввод граничных значений - нули")
+    @DisplayName("3.19 Валидация поля Год. Ввод граничных значений - нули")
     public void paymentYearZero() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -371,7 +371,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.23 Валидация поля Год. Ввод граничных значений - одна цифра")
+    @DisplayName("3.20 Валидация поля Год. Ввод граничных значений - одна цифра")
     public void paymentWithOneDigitOfTheYear() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -383,7 +383,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.25 Валидация поля Год. Ввод граничных значений - текущий месяц и год")
+    @DisplayName("3.21 Валидация поля Год. Ввод граничных значений - текущий месяц и год")
     public void paymentWithCurrentCardDate() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -396,7 +396,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.26 Валидация поля Год. Ввод граничных значений -  истекший месяц текущий год")
+    @DisplayName("3.22 Валидация поля Год. Ввод граничных значений -  истекший месяц текущий год")
     public void paymentWithExpiredCardMonth() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -408,7 +408,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.27 Валидация поля Год. Ввод граничных значений -  следующий месяц текущий год")
+    @DisplayName("3.23 Валидация поля Год. Ввод граничных значений -  следующий месяц текущий год")
     public void paymentWithCardMonthNext() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -421,7 +421,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("Валидация поля Год истекший год")
+    @DisplayName("3.24 Валидация поля Год истекший год")
     public void paymentWithExpiredYear() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -433,7 +433,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.28 Валидация поля Владелец - кириллица")
+    @DisplayName("3.25 Валидация поля Владелец - кириллица")
     public void paymentOwnerCyrillic() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -445,7 +445,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.29 Валидация поля Владелец - спец символы")
+    @DisplayName("3.26 Валидация поля Владелец - спец символы")
     public void paymentOwnerSpecialCharacters() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -457,7 +457,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.30 Валидация поля Владелец - цифры")
+    @DisplayName("3.27 Валидация поля Владелец - цифры")
     public void ownerPaymentInNumbers() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -469,7 +469,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("Валидация поля Владелец - пустое поле")
+    @DisplayName("3.28 Валидация поля Владелец - пустое поле")
     public void paymentOwnerEmpty() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -481,7 +481,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.31 Валидация поля Владелец. Ввод граничных значений - одно слово")
+    @DisplayName("3.29 Валидация поля Владелец. Ввод граничных значений - одно слово")
     public void paymentOwnerName() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -493,7 +493,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.32 Валидация поля Владелец. Ввод граничных значений - по одной букве")
+    @DisplayName("3.30 Валидация поля Владелец. Ввод граничных значений - по одной букве")
     public void paymentOwnerInValid() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -505,7 +505,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.33 Валидация поля CVC - латиница")
+    @DisplayName("3.31 Валидация поля CVC - латиница")
     public void paymentInCodeEn() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -517,7 +517,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.34 Валидация поля CVC - кириллица")
+    @DisplayName("3.32 Валидация поля CVC - кириллица")
     public void paymentInCodeRu() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -529,7 +529,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.35 Валидация поля CVC - спецсимволы")
+    @DisplayName("3.33 Валидация поля CVC - спецсимволы")
     public void paymentSymbolsInCode() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -541,7 +541,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.36 Валидация поля CVC - пустое поле")
+    @DisplayName("3.34 Валидация поля CVC - пустое поле")
     public void paymentCodeEmpty() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -553,7 +553,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.37 Валидация поля CVC. Граничные значения - две цифры")
+    @DisplayName("3.35 Валидация поля CVC. Граничные значения - две цифры")
     public void paymentTwoDigitsInTheCode() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
@@ -565,7 +565,7 @@ public class PyamentTest {
     }
 
     @Test
-    @DisplayName("3.39 Валидация поля CVC. Граничные значения - нули")
+    @DisplayName("3.36 Валидация поля CVC. Граничные значения - нули")
     public void paymentInCodeZero() {
         PaymentTypesPage page = new PaymentTypesPage();
         page.paymentTypesPage();
