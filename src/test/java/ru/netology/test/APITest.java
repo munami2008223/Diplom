@@ -41,28 +41,28 @@ public class APITest {
     }
 
     @Test
-    @DisplayName("4.3 Должно быть поле PaymentId при оплате одобренной дебетовой картой")
+    @DisplayName("4.3 Должно быть поле Payment_Id при оплате одобренной дебетовой картой")
     void shouldHavePaymentIdWithDebitApprovedCard() {
         payFromCard(approvedCardNumber, debitPay, 200);
         assertNotNull(DBHelper.getPaymentId());
     }
 
     @Test
-    @DisplayName("4.4 Должно быть поле TransactionId при оплате одобренной дебетовой картой")
+    @DisplayName("4.4 Должно быть поле Transaction_Id при оплате одобренной дебетовой картой")
     void shouldHaveTransactionIdWithDebitApprovedCard() {
         payFromCard(approvedCardNumber, debitPay, 200);
         assertNotNull(DBHelper.getTransactionIdDebitCard());
     }
 
     @Test
-    @DisplayName("4.5 Поля PaymentId и TransactionId равны при оплате одобренной дебетовой картой")
+    @DisplayName("4.5 Поля Payment_Id и Transaction_Id равны при оплате одобренной дебетовой картой")
     void shouldEqualPaymentAndTransactionIdWithDebitApprovedCard() {
         payFromCard(approvedCardNumber, debitPay, 200);
         assertEquals(DBHelper.getPaymentId(), DBHelper.getTransactionIdDebitCard());
     }
 
     @Test
-    @DisplayName("4.6 Должно быть значение NULL в поле CreditId при оплате одобренной дебетовой картой")
+    @DisplayName("4.6 Должно быть значение NULL в поле Credit_Id при оплате одобренной дебетовой картой")
     void shouldNotHaveCreditIdWithDebitApprovedCard() {
         payFromCard(approvedCardNumber, debitPay, 200);
         assertNull(DBHelper.getCreditId());
@@ -83,21 +83,21 @@ public class APITest {
     }
 
     @Test
-    @DisplayName("4.9 Должно отсутствовать поле PaymentId при оплате заблокированной дебетовой картой")
+    @DisplayName("4.9 Должно отсутствовать поле Payment_Id при оплате заблокированной дебетовой картой")
     void shouldNotHavePaymentIdWithDebitDeclinedCard() {
         payFromCard(declinedCardNumber, debitPay, 200);
         assertNull(DBHelper.getPaymentId());
     }
 
     @Test
-    @DisplayName("4.10 Должно отсутствовать поле TransactionId при оплате заблокированной дебетовой картой")
+    @DisplayName("4.10 Должно отсутствовать поле Transaction_Id при оплате заблокированной дебетовой картой")
     void shouldNotHaveTransactionIdWithDebitDeclinedCard() {
         payFromCard(declinedCardNumber, debitPay, 200);
         assertNull(DBHelper.getTransactionIdDebitCard());
     }
 
     @Test
-    @DisplayName("4.11 Должно отсутствовать поле CreditId при оплате заблокированной дебетовой картой")
+    @DisplayName("4.11 Должно отсутствовать поле Credit_Id при оплате заблокированной дебетовой картой")
     void shouldNotHaveCreditIdWithDebitCardDeclined() {
         payFromCard(declinedCardNumber, debitPay, 200);
         assertNull(DBHelper.getCreditId());
@@ -119,21 +119,21 @@ public class APITest {
     }
 
     @Test
-    @DisplayName("4.14 Должно быть поле BankId при оплате одобренной картой в кредит")
+    @DisplayName("4.14 Должно быть поле BankI_d при оплате одобренной картой в кредит")
     void shouldHaveBankIdWithCreditApprovedCard() {
         payFromCard(approvedCardNumber, creditPay, 200);
         assertNotNull(DBHelper.getBankIdCreditCard());
     }
 
     @Test
-    @DisplayName("4.15 Должно быть поле CreditId при оплате одобренной картой в кредит")
+    @DisplayName("4.15 Должно быть поле Credit_Id при оплате одобренной картой в кредит")
     void shouldHaveCreditIdWithCreditApprovedCard() {
         payFromCard(approvedCardNumber, creditPay, 200);
         assertNotNull(DBHelper.getCreditId());
     }
 
     @Test
-    @DisplayName("4.16 Должно отсутствовать поле PaymentId при оплате одобренной картой в кредит")
+    @DisplayName("4.16 Должно отсутствовать поле Payment_Id при оплате одобренной картой в кредит")
     void shouldNotHavePaymentIdWithCreditApprovedCard() {
         payFromCard(approvedCardNumber, creditPay, 200);
         assertNull(DBHelper.getPaymentId());
@@ -147,21 +147,21 @@ public class APITest {
     }
 
     @Test
-    @DisplayName("4.18 Должно отсутствовать поле BankId при оплате заблокированной картой в кредит")
+    @DisplayName("4.18 Должно отсутствовать поле Bank_Id при оплате заблокированной картой в кредит")
     void shouldNotHaveBankIdWithCreditDeclinedCard() {
         payFromCard(declinedCardNumber, creditPay, 200);
         assertNull(DBHelper.getBankIdCreditCard());
     }
 
     @Test
-    @DisplayName("4.19 Должно отсутствовать поле CreditId при оплате заблокированной картой в кредит")
+    @DisplayName("4.19 Должно отсутствовать поле Credit_Id при оплате заблокированной картой в кредит")
     void shouldNotHaveCreditIdWithCreditApprovedCard() {
         payFromCard(declinedCardNumber, creditPay, 200);
         assertNull(DBHelper.getCreditId());
     }
 
     @Test
-    @DisplayName("4.20 Должно отсутствовать поле PaymentId при оплате заблокированной картой в кредит")
+    @DisplayName("4.20 Должно отсутствовать поле Payment_Id при оплате заблокированной картой в кредит")
     void shouldNotHavePaymentIdWithCreditDeclinedCard() {
         payFromCard(declinedCardNumber, creditPay, 200);
         assertNull(DBHelper.getPaymentId());
