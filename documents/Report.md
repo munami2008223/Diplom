@@ -23,8 +23,8 @@
 
 Подготовлены отчёты:
 
-Отчёт [Allure](https://github.com/munami2008223/Diplom/blob/main/documents/Screenshot_10)
-[Allure](http://172.24.192.1:50621/index.html)
+Отчёт [Allure](http://172.24.192.1:50621/index.html)
+Отчёт [Gradle](file:///C:/Users/Natali/IdeaProjects/Diplom/build/reports/tests/test/index.html)
 
 ***Выявленные баги описаны*** [Issues](https://github.com/munami2008223/Diplom/issues)
 
