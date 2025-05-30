@@ -23,7 +23,7 @@
 
 Подготовлены отчёты:
 
-Отчёт [Allure](http://172.24.192.1:50621/index.html)
+Отчёт [Allure](https://github.com/munami2008223/Diplom/blob/main/documents/Screenshot_10.png)
 
 Отчёт [Gradle](https://github.com/munami2008223/Diplom/blob/main/documents/Screenshot_9.png)
 
