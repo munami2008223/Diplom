@@ -15,8 +15,8 @@ public class DBHelper {
     private static Connection connection() {
         String url = System.getProperty("db.url");
         String user = System.getProperty("db.user");
-        String pass = System.getProperty("db.password");
-        return DriverManager.getConnection(url, user, pass);
+        String password = System.getProperty("db.password");
+        return DriverManager.getConnection(url, user, password);
     }
 
     // DEBIT CARD

@@ -33,7 +33,7 @@ public class CreditCardPage {
 
         heading.shouldBe(visible);
     }
-
+/**/
     public void fillCardPaymentForm(String cardNumber, String month, String year, String owner, String code) {
         cardNumberField.setValue(cardNumber);
         monthField.setValue(month);

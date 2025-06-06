@@ -13,7 +13,7 @@ public class SQLHelper {
 
     private static final String url = System.getProperty("db.url");
     private static final String user = System.getProperty("db.user");
-    private static final String pass = System.getProperty("db.password");
+    private static final String password = System.getProperty("db.password");
     private static final QueryRunner runner = new QueryRunner();
 
 
@@ -23,7 +23,7 @@ public class SQLHelper {
 
     @SneakyThrows
     private static Connection getConnection() {
-        return DriverManager.getConnection(url, user, pass);
+        return DriverManager.getConnection(url, user, password);
 
     }
 
